@@ -5,9 +5,9 @@ module.exports = {
   once: true,
   execute(member) {
     const channel = member.client.channels.cache.get("943917750210940941");
-    const exampleEmbed = new EmbedBuilder()
+    const Embed = new EmbedBuilder()
       .setColor(0x0099ff)
-      .setTitle("Welcome to our server")
+      .setTitle("Welcome to our server!")
       .setAuthor({
         name: member.user.username,
         iconURL: member.user.displayAvatarURL(),
@@ -19,7 +19,7 @@ module.exports = {
       .setImage("https://media.giphy.com/media/VIVmZA63MwdcCUN0KC/giphy.gif")
       .setTimestamp();
 
-    channel.send({ embeds: [exampleEmbed] });
+    channel.send({ embeds: [Embed] });
     console.log(`${member.user.tag} has just joined the server`);
   },
 };
